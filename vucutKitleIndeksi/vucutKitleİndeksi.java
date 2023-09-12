@@ -1,7 +1,7 @@
 package deneme;
 import java.util.Scanner;
-
-public class vucutKitle›ndeksi {
+//Kilo  ve boy bilgilerine g√∂re v√ºcut kitle endeksini hesaplayan program
+public class vucutKitle√ùndeksi {
 	public static void main(String[] args) {
 		double boy,kilo,index;
 		Scanner input=new Scanner(System.in);
@@ -10,7 +10,7 @@ public class vucutKitle›ndeksi {
 		System.out.print("Kilonuzu giriniz");
 		kilo=input.nextDouble();
 		index=kilo/(boy*boy);
-		System.out.print("V¸cut kilo indeksiniz: "+index);
+		System.out.print("V√ºcut kilo indeksiniz: "+index);
 		
 	}
 
