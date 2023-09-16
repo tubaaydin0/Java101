@@ -1,22 +1,24 @@
 import java.util.Scanner;
+/*Klavyeden girilen bir sayının mükemmel sayı olup/olmadığını bulan ve sayı mükemmel sayı ise
+ekrana “mükemmel sayıdır.” değilse “mükemmel sayı değildir.” ifadelerini ekrana yazan programı
+Java dilinde yazınız.
+
+Mükemmel Sayı Nedir ?
+Bir sayının kendisi hariç pozitif tam sayı çarpanları (kalansız bölen sayıların) toplamı
+kendisine eşit olan sayıya mükemmel sayı denir.*/
 public class Main {
     public static void main(String[] args) {
-        int sayi,carp=1,tempSayi=0;
+        int sayi,top=0;
         Scanner inp= new Scanner(System.in);
         System.out.println("Bir sayı giriniz: ");
         sayi=inp.nextInt();
-        tempSayi=sayi;
-        int i=2; //En küçük pozitif bölen 2 olduğu için.
-        while(tempSayi!=1){
-            if(tempSayi%i==0){ 
-                tempSayi/=i;
-                carp*=i;
-                i=1;
+        for (int i=1; i<sayi; i++){ // girilen sayının bölenlerini bulup bunları topluyoruz.
+            if (sayi%i==0){
+                top+=i;
             }
-            i++;
         }
 
-        if(carp==sayi && sayi!=1){
+        if(sayi==top && sayi!=1){ //Bölenlerin toplamı sayıya eşit ve sayı 1 değilse
             System.out.println("Mükemmel sayıdır.");
         }
         else{
