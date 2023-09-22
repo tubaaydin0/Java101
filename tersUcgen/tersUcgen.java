@@ -3,7 +3,7 @@ import java.util.Scanner;
 
 public class tersUcgen {
 	 public static void main(String[] args) {
-		 /*			boşluk		yıldız		satır:5
+		 /*			boşluk		yıldız		satır:3
 		  *****			0		5
 		   ***			2		3
 		    *			4		1
@@ -13,12 +13,12 @@ public class tersUcgen {
 		 System.out.print("Satır sayısını giriniz: ");
 		 satir=inp.nextInt();
 		 
-		 for(int i=satir; i>=0 ;i--) {
+		 for(int i=satir; i>=0 ;i--) { //Satır
 			 for(int j=0; j<satir-i;j++) {
 				 System.out.print(" "); 
-				 
+				 				//Sütun dolduruluyor
 			 }
-			 for(int k=0;k<(2*i)+1;k++) {
+			 for(int k=0;k<(2*i)-1;k++) {
 				 System.out.print("*"); 
 			 }
 			 System.out.println(); 
